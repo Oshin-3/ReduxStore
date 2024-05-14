@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { add } from '../store/cartSlice';
-import { fetchProducts } from '../store/productSlice';
-
+//import { fetchProducts } from '../store/productSlice';
+import { fetchProductsCAT } from '../store/productSlice';
 
 function Products() {
     //const [products, setProducts] = useState([]);
@@ -20,7 +20,7 @@ function Products() {
             // const res = await axios.get('https://fakestoreapi.com/products')
             // //console.log(res.data)
             // setProducts(res.data)
-            dispatch(fetchProducts())
+            dispatch(fetchProductsCAT())
         }
 
         getProducts()
